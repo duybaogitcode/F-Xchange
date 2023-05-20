@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28744545-a20b-495f-ab81-15148c3be7a4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/safenet/fxchange/FXchangeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safenet/fxchange/FXchangeApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/safenet/fxchange/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safenet/fxchange/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/safenet/fxchange/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safenet/fxchange/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/safenet/fxchange/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safenet/fxchange/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/safenet/fxchange/services/UserSerives.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/safenet/fxchange/services/UserSerives.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/safenet/fxchange/FXchangeApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/safenet/fxchange/FXchangeApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/safenet/fxchange/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/safenet/fxchange/entities/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/safenet/fxchange/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/safenet/fxchange/repositories/UserRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -27,6 +39,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Q0fSWHWOdUzMyD0hd5cssoFnQj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -40,8 +55,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/MyWork/SWP/F-Xchange",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/giahu/Desktop/LamGiaHung/F-Xchange_BE",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,6 +89,8 @@
       <workItem from="1684523727243" duration="3052000" />
       <workItem from="1684527897496" duration="59000" />
       <workItem from="1684528570025" duration="160000" />
+      <workItem from="1684531623266" duration="192000" />
+      <workItem from="1684549717277" duration="7157000" />
     </task>
     <servers />
   </component>
