@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "types")
 public class Type {
     @Id
-    private ObjectId id;
+    private int id;
 
     private String name;
 

@@ -16,6 +16,7 @@ import java.util.Map;
 @Data
 @Document(collection = "stuff")
 public class Stuff {
+
     @Id
     private ObjectId id;
 
@@ -25,24 +26,20 @@ public class Stuff {
 
     private List<String> images;
 
-    @DBRef
-    private User author;
+    private Author author;
 
     private int condition;
 
-    @DBRef
-    private Category category;
+    private String category;
 
-    @DBRef
-    private Type type;
+    private String type;
 
-    @DBRef
-    private List<Tag> tag;
+    private List<TagValue> tags;
 
-    private int status;
+    private Status status;
 
     @Field("custom_field")
-    private Map<String,Object> customField;
+    private Map<String, Object> customField;
 
     @CreatedDate
     @Field("create_at")
@@ -52,13 +49,12 @@ public class Stuff {
     @Field("update_at")
     private Date updateAt;
 
-    @DBRef
-    private List<Comment> comments;
+    private List<ObjectId> comments;
 
     public Stuff() {
     }
 
-    public Stuff(String title, String content, List<String> images, User author, int condition, Category category, Type type, List<Tag> tag, int status, Map<String, Object> customField, Date createAt, Date updateAt, List<Comment> comments) {
+    public Stuff(String title, String content, List<String> images, Author author, int condition, String category, String type, List<TagValue> tags, Status status, Map<String, Object> customField, Date createAt, Date updateAt, List<ObjectId> comments) {
         this.title = title;
         this.content = content;
         this.images = images;
@@ -66,7 +62,7 @@ public class Stuff {
         this.condition = condition;
         this.category = category;
         this.type = type;
-        this.tag = tag;
+        this.tags = tags;
         this.status = status;
         this.customField = customField;
         this.createAt = createAt;

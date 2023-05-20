@@ -20,27 +20,27 @@ public class UserController {
     private UserSerives userSerives;
 
     @PostMapping
-    public User createUser(@RequestBody User user){
+    public User createUser(@RequestBody User user) {
         return userSerives.createUser(user);
     }
 
     @GetMapping("/{id}")
-    public User getUser(@PathVariable ObjectId id) {
+    public User getUser(@PathVariable String id) {
         return userSerives.getUser(id);
     }
 
     @GetMapping
-    public List<User> getUsers(){
+    public List<User> getUsers() {
         return userSerives.getUsers();
     }
 
-    @PutMapping
-    public void updateUser(@RequestBody User user){
-        userSerives.updateUserInfo(user);
+    @PutMapping("/{id}")
+    public User updateUser(@PathVariable String id, @RequestBody User user) {
+        return userSerives.updateUserInfo(id, user);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteUser(@PathVariable ObjectId id){
+    public void deleteUser(@PathVariable ObjectId id) {
         userSerives.deleteUser(id);
     }
 

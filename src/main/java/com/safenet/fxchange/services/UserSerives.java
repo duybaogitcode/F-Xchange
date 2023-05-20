@@ -21,17 +21,26 @@ public class UserSerives {
         return userRepository.save(user);
     }
 
-    public User getUser(ObjectId id) {
-        return userRepository.findById(id).orElseThrow(() -> new UserException("User not found!"));
+    public User getUser(String id) {
+        return userRepository.findById(new ObjectId(id)).orElseThrow(() -> new UserException("User not found!"));
     }
 
     public List<User> getUsers() {
         return userRepository.findAll();
     }
 
-    public void updateUserInfo(User user) {
-        User existingUser = getUser(user.getId());
+    public User updateUserInfo(String id, User user) {
+        User existingUser = getUser(id);
         existingUser.setInformations(user.getInformations());
+        existingUser.setRole(user.getRole());
+        existingUser.setStatus(user.getStatus());
+        existingUser.setCreateAt(user.getCreateAt());
+        existingUser.setUpdateAt(user.getUpdateAt());
+        existingUser.setPoint(user.getPoint());
+        existingUser.setStuff(user.getStuff());
+        existingUser.setAttendanceDates(user.getAttendanceDates());
+        existingUser.setTransactions(user.getTransactions());
+        return userRepository.save(existingUser);
     }
 
     public void deleteUser(ObjectId id) {

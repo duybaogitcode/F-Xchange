@@ -6,6 +6,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.Date;
 
@@ -19,8 +20,8 @@ public class PointHistory {
 
     private int change;
 
-    @DBRef
-    private User user;
+    @Field("user_id")
+    private ObjectId userId;
 
     @CreatedDate
     private Date time;
@@ -28,10 +29,10 @@ public class PointHistory {
     public PointHistory() {
     }
 
-    public PointHistory(String content, int change, User user, Date time) {
+    public PointHistory(String content, int change, ObjectId userId, Date time) {
         this.content = content;
         this.change = change;
-        this.user = user;
+        this.userId = userId;
         this.time = time;
     }
 }
