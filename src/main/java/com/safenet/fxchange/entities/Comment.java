@@ -19,8 +19,10 @@ public class Comment {
 
     private String content;
 
-    @DBRef
-    private User author;
+    private Author author;
+
+    @Field("stuff_id")
+    private ObjectId stuffId;
 
     @CreatedDate
     @Field("create_at")
@@ -33,9 +35,10 @@ public class Comment {
     public Comment() {
     }
 
-    public Comment(String content, User author, Date createAt, Date updateAt) {
+    public Comment(String content, Author author, ObjectId stuffId, Date createAt, Date updateAt) {
         this.content = content;
         this.author = author;
+        this.stuffId = stuffId;
         this.createAt = createAt;
         this.updateAt = updateAt;
     }

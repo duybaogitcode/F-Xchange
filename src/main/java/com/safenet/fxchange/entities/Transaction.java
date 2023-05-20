@@ -11,6 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 @Data
 @Document(collection = "transactions")
@@ -25,9 +26,9 @@ public class Transaction {
     private ObjectId stuffId;
 
     @Field("custom_field")
-    private List<String> customField;
+    private Map<String, Object> customField;
 
-    private int status;
+    private Map<String, String> status;
 
     @CreatedDate
     @Field("create_at")
@@ -40,7 +41,7 @@ public class Transaction {
     public Transaction() {
     }
 
-    public Transaction(ObjectId customerId, ObjectId stuffId, List<String> customField, int status, Date createAt, Date updateAt) {
+    public Transaction(ObjectId customerId, ObjectId stuffId, Map<String, Object> customField, Map<String, String> status, Date createAt, Date updateAt) {
         this.customerId = customerId;
         this.stuffId = stuffId;
         this.customField = customField;

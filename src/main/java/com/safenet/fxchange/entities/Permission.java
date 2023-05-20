@@ -11,21 +11,22 @@ import java.util.List;
 @Document(collection = "permissions")
 public class Permission {
     @Id
-    private Integer id;
+    private int id;
 
-    private Boolean read;
-    private Boolean write;
+    @Field("resource_url")
+    private String resourceUrl;
 
-    @Field("resource_urls")
-    private List<String> resourceUrls;
+    private List<String> read;
+
+    private List<String> write;
 
     public Permission() {
     }
 
-    public Permission(Integer id, Boolean read, Boolean write, List<String> resourceUrls) {
+    public Permission(int id, String resourceUrl, List<String> read, List<String> write) {
         this.id = id;
+        this.resourceUrl = resourceUrl;
         this.read = read;
         this.write = write;
-        this.resourceUrls = resourceUrls;
     }
 }

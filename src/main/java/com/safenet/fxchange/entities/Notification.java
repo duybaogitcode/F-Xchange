@@ -17,7 +17,7 @@ public class Notification {
 
     private String content;
 
-    private String type;
+    private NotiType type;
 
     @Field("user_id")
     private ObjectId userId;
@@ -33,7 +33,7 @@ public class Notification {
     public Notification() {
     }
 
-    public Notification(String content, String type, ObjectId userId, ObjectId targetId, String url, Date time) {
+    public Notification(String content, NotiType type, ObjectId userId, ObjectId targetId, String url, Date time) {
         this.content = content;
         this.type = type;
         this.userId = userId;

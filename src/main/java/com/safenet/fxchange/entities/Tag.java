@@ -11,7 +11,7 @@ import java.util.List;
 @Document(collection = "tags")
 public class Tag {
     @Id
-    private ObjectId id;
+    private int id;
 
     private String name;
 

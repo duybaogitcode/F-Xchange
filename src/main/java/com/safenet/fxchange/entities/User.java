@@ -33,7 +33,7 @@ public class User {
     @Field("invitation_code")
     private String invitationCode;
 
-    private String status;
+    private Status status;
 
     @CreatedDate
     @Field("create_at")
@@ -43,19 +43,17 @@ public class User {
     @Field("update_at")
     private Date updateAt;
 
-    @DBRef
-    private List<Stuff> stuff;
+    private List<ObjectId> stuff;
 
     @Field("attendance_dates")
     private List<Date> attendanceDates;
 
-    @DBRef
-    private List<Transaction> transactions;
+    private List<ObjectId> transactions;
 
     public User() {
     }
 
-    public User(Information informations, String googleId, Role role, int point, String invitationCode, String status, Date createAt, Date updateAt, List<Stuff> stuff, List<Date> attendanceDates, List<Transaction> transactions) {
+    public User(Information informations, String googleId, Role role, int point, String invitationCode, Status status, Date createAt, Date updateAt, List<ObjectId> stuff, List<Date> attendanceDates, List<ObjectId> transactions) {
         this.informations = informations;
         this.googleId = googleId;
         this.role = role;

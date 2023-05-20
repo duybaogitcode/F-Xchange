@@ -10,16 +10,18 @@ import java.util.List;
 @Data
 @Document(collection = "roles")
 public class Role {
+
     @Id
     private int id;
+
     private String name;
-    @DBRef
-    private List<Permission> permissions;
+
+    private List<String> permissions;
 
     public Role() {
     }
 
-    public Role(int id, String name, List<Permission> permissions) {
+    public Role(int id, String name, List<String> permissions) {
         this.id = id;
         this.name = name;
         this.permissions = permissions;
