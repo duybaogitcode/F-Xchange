@@ -1,11 +1,16 @@
 package com.safenet.fxchange.controllers;
 
 
+import com.safenet.fxchange.entities.Information;
+import com.safenet.fxchange.entities.Role;
 import com.safenet.fxchange.entities.User;
 import com.safenet.fxchange.exceptions.UserException;
 import com.safenet.fxchange.services.UserSerives;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.QueryMapping;
+import org.springframework.graphql.data.method.annotation.SchemaMapping;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -47,5 +52,18 @@ public class UserController {
     @ExceptionHandler
     public ResponseEntity<String> handleUserNotFound(UserException e) {
         return ResponseEntity.notFound().build();
+    }
+
+    @QueryMapping
+    public User getUserById(@Argument String id){
+        return getUser(id);
+    }
+    @SchemaMapping
+    public Information information(User user){
+        return user.getInformations();
+    }
+    @SchemaMapping
+    public Role role(User user){
+        return user.getRole();
     }
 }
